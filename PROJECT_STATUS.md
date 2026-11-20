@@ -104,7 +104,7 @@ Engineered for 100% visual and functional consistency with the existing `HealTra
   - [types.ts](file:///e:/Healtrack-Rehab/HealtrackRehabMobile/src/app/navigation/types.ts): Typed parameters for all root stack and tab routes.
 - **Native Android Configuration:**
   - [styles.xml](file:///e:/Healtrack-Rehab/HealtrackRehabMobile/android/app/src/main/res/values/styles.xml): `android:navigationBarColor = #000000`, `android:windowLightNavigationBar = false`.
-  - [MainActivity.kt](file:///e:/Healtrack-Rehab/HealtrackRehabMobile/android/app/src/main/java/com/com.healtrackrehab.mobile/MainActivity.kt): Programmatic enforcement of black navigation bar and white button icons.
+  - [MainActivity.kt](file:///e:/Healtrack-Rehab/HealtrackRehabMobile/android/app/src/main/java/com/healtrackrehab/mobile/MainActivity.kt): Programmatic enforcement of black navigation bar and white button icons.
 
 ## 7. Verification Status
 
@@ -129,3 +129,4 @@ Engineered for 100% visual and functional consistency with the existing `HealTra
 | 2026-11-19 | Handled cross-platform safe area bottom padding to prevent Android system buttons and iOS Home Indicator from clipping content |
 | 2026-11-20 | Upgraded bottom tab navigation (`MainTabs.tsx`) from 4 tabs to HealTrackPro's exact 6 tabs (`Home`, `Appointments`, `SearchPatients`, `AddPatient`, `Connect`, `Profile`) with `tabBarShowLabel: false`, matching vector icons, and created supporting screen modules (`AddPatientScreen.tsx`, `ConnectScreen.tsx`, `ProfileScreen.tsx`) |
 | 2026-11-20 | Resolved grey Android system navigation bar issue: configured native `styles.xml` (`navigationBarColor = #000000`, `windowLightNavigationBar = false`) and `MainActivity.kt` (`window.navigationBarColor = Color.BLACK`), and isolated the white 60dp tab bar from a dedicated black bottom inset spacer in `MainTabs.tsx`. Successfully rebuilt and installed native debug APK on connected test device with 100% pitch-black navigation bar and crisp white system buttons |
+| 2026-11-20 | Normalized Android package directory structure: migrated `MainActivity.kt` and `MainApplication.kt` from malformed literal folder `android/app/src/main/java/com/com.healtrackrehab.mobile/` to standard nested package folder `android/app/src/main/java/com/healtrackrehab/mobile/`. Verified Gradle Kotlin compilation (`compileDebugKotlin` BUILD SUCCESSFUL), TypeScript (0 errors), and ESLint (0 errors, 0 warnings) |
